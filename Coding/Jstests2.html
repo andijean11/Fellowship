@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<title> Experimentation for project </title>
+<meta charset-"UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body-class="w3-light-grey">
+
+<div class="w3-content" style="max-width:1400px">
+
+<header class="w3container w3-center w3-padding-32">
+
+<h1><b> Andrea's digital translation experiments </b> <h1>
+
+<p> Welcome to me figuring out how to make my projects a reality with <span class="w3-tag">JavaScript </span> </p> </header>
+<body>
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="Jstests.html#" class="w3-bar-item w3-button w3-theme-l1">~A~</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Essays</a>
+    <a href="Frenchp1.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Poetry</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+
+  </div>
+</div>
+<!--Introduction box -->
+<div class="w3-col 14">
+<div class="w3-card-2 w3-margin w3-margin-top">
+<img src="pic1.jpg" style="width:25%">
+<div class="w3-container w3-white">
+<h3> <b> The Mad Translator </b> </h4>
+<p> This is a really old picture of me when I was trying to be cool. <br> I don't try to be cool anymore, because I know that I am cool.<br>
+Look at these cool digital features I've integrated with translation. </p>
+</div> </div> <hr>
+
+<head>
+<script src="Document2.js">
+	 </script>
+	 </head>
+
+
+<h4 style="color:pink;font-family:tahoma;"> Practicing with JavaScript </h4>
+
+<p id="demo"> Le chat noir </p>
+<button type="button" onclick="oops()">Click Me if you dare!</button>
+
+
+
+<hr>
+<p id="sup"></p>
+
+<script> var adjective = "magnifique";
+document.getElementById("sup").innerHTML = adjective; </script>
+
+<p id="co"></p>
+
+<script>
+var sort = {
+    def1 : "Curse,",
+    def2  : " lot,",
+    def3       : " fate,",
+    def4  : " spell."
+};
+
+document.getElementById("co").innerHTML =
+sort.def1 + sort.def2 + sort.def3 + "or" + sort.def4 ;
+
+</script>
+<hr>
+<h1> using mouseover </h5>
+<p id="here" onmouseover="mouseOver()" onmouseout="mouseOut()"> This is a bateau. </p>
+
+<script>
+function mouseOver(){ document.getElementById("here").innerHTML = "This is a boat.";}
+
+function mouseOut(){ document.getElementById("here").innerHTML ="This is a bateau.";}
+</script>
+
+<hr>
+<h1 style="color:green;font-family:courier;"> string replacement with button </h1>
+<p> We're going to make a button for this! <p>
+
+<button onclick="twoRep()"> Translate! </button>
+
+<p id="test"> Replace the English word with the French word: The chien is blanc  . </p>
+<script>
+function twoRep() {
+    var str = document.getElementById("test").innerHTML;
+    var txt = str.replace("chien","dog");
+    var txt = str.replace("blanc", "white");
+    document.getElementById("test").innerHTML = txt;
+}
+</script>
+
+<hr>
+<h1 style="color:lightblue;font-family:verdana;"> string replacement with mouseover </h1>
+<p> Can we combine the two? <p>
+
+<p id="mod" onmouseover="myFunction1()"> The chien is mignon. </p>
+<script>
+function myFunction1() {
+    var string = document.getElementById("mod").innerHTML;
+    var sentence = string.replace("chien","dog");
+    document.getElementById("mod").innerHTML = sentence;
+}
+</script>
+<h2> it works! </h2>
+
+<hr>
+<h2 style="color:orange;"> can we do mouse over and out? </h2>
+
+<p id="kitty" onmouseenter="myFunction3()" onmouseleave="myFunction4()"> I love les chatons! </p>
+
+<script>
+function myFunction3(){
+	var rope = document.getElementById("kitty").innerHTML;
+	var knot = rope.replace("les chatons", "kittens");
+	document.getElementById("kitty").innerHTML = knot; }
+
+function myFunction4(){
+	document.getElementById("kitty").innerHTML = "I love les chatons!" ; }
+
+</script>
+
+<p> okay that worked but I kinda cheated because instead of using replace, I just had the sentence reappear by redefining the innerHTMl.
+<hr>
+
+<h3 style="color:green;font-family:arial;background-color:yellow;"> can we have multiple replace elements in a single function? </h3>
+
+<p id="dinner" onmouseenter="myFunction5()";> I eat du canard for mon dejeuner. </p>
+<script>
+
+function myFunction5 (){
+	var plate = document.getElementById("dinner").innerHTML;
+	var yum = plate.replace("du canard", "duck");
+	document.getElementById("dinner").innerHTML = yum; }
+
+
+</script>
+<p> okay I can't figure it out for now. It looks like I might be able to use EventListener,
+but overall I need to understand DOMs more. . .will return to this later. Even if I could make this work, it seems very clunky,
+which would be a ton of work to code for even a short poem. </p>
+
+<hr> <hr> <hr>
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p>Experiment by the Mad Translator</p>
+  <p>I'm so cool <a href="https://en.wikipedia.org/wiki/Penguin">
+  so chill</a>.</p></footer><br> <br> <br>
+
+</body>
+
+
+
+
+</html>
