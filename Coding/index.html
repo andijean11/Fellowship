@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<!--
+The first script below, pulls in jquery, which then allows us to get the HTML from your header.html file, and then "prepend", or add it above the header in this file
+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$.get( "header.html", function( data ) {
+  $('body').prepend(data)
+});
+</script>
+<div class="w3-content">
+
+<body>
+
+<!--Introduction box -->
+<div class="w3-col 14">
+<div class="w3-card-2 w3-margin w3-margin-top">
+<img src="pic1.jpg" style="width:25%">
+<div class="w3-container w3-white">
+<h3> <b> The Mad Translator </b> </h4>
+<p> This is a really old picture of me when I was trying to be cool. <br> I don't try to be cool anymore, because I know that I am cool.<br>
+Look at these cool digital features I've integrated with translation. </p>
+</div> </div> <hr>
+
+
+
+
+
+
+<h4 style="color:pink;font-family:tahoma;"> Practicing with JavaScript </h4>
+
+<p id="demo"> Le chat noir </p>
+<button type="button" onclick="oops()">Click Me if you dare!</button>
+
+
+
+
+
+
+
+<hr>
+<p id="sup"></p>
+
+
+
+<p id="co"></p>
+
+<script>
+var sort = {
+    def1 : "Curse,",
+    def2  : " lot,",
+    def3       : " fate,",
+    def4  : " spell."
+};
+
+document.getElementById("co").innerHTML =
+sort.def1 + sort.def2 + sort.def3 + "or" + sort.def4 ;
+
+</script>
+<hr>
+
+
+
+
+
+
+<h1> using mouseover </h5>
+<p id="here" onmouseover="mouseOver()" onmouseout="mouseOut()"> This is a bateau. </p>
+
+
+
+
+
+
+
+
+
+
+
+<hr>
+<h1 style="color:green;font-family:courier;"> string replacement with button </h1>
+<p> We're going to make a button for this! <p>
+
+<button onclick="button1()"> Translate the word chien! </button>
+
+<p id="testA"> The chien is blanc. </p>
+<script>
+function button1() {
+    var strA = document.getElementById("testA").innerHTML;
+    var txtA = strA.replace("chien","dog");
+    document.getElementById("testA").innerHTML = txtA;
+
+}
+</script>
+
+
+
+
+
+<hr>
+<h1 style="color:lightblue;font-family:verdana;"> string replacement with mouseover </h1>
+<p> Can we combine the two? <p>
+
+<p id="testB" onmousemove="functionB()"> The cheval is mignon. I love the cheval. The cheval likes les pommes.</p>
+<script>
+function functionB() {
+    var str = document.getElementById("testB").innerHTML;
+    var txt = str.replace(/cheval/i,"horse");
+    document.getElementById("testB").innerHTML = txt;
+
+    var txt2 = txt.replace("mignon","cute");
+    document.getElementById("testB").innerHTML = txt2;
+
+    var txt3 = txt2.replace("les pommes","apples");
+    document.getElementById("testB").innerHTML = txt3;
+}
+</script>
+<h2> it works! </h2>
+
+
+
+
+
+<hr>
+<h2 style="color:orange;"> can we do mouse over and out? </h2>
+
+<p id="kitty" onmouseenter="myFunction3()" onmouseleave="myFunction4()"> I love les chatons! </p>
+
+<script>
+function myFunction3(){
+	var rope = document.getElementById("kitty").innerHTML;
+	var knot = rope.replace("les chatons", "kittens");
+	document.getElementById("kitty").innerHTML = knot; }
+
+function myFunction4(){
+	document.getElementById("kitty").innerHTML = "I love les chatons!" ; }
+
+</script>
+
+<p> okay that worked but I kinda cheated because instead of using replace, I just had the sentence reappear by redefining the innerHTMl.
+<hr>
+
+<h3 style="color:green;font-family:arial;background-color:yellow;"> can we have multiple replace elements in a single function? </h3>
+
+<p id="dinner" onmouseenter="myFunction5()" onmouseleave="myFunction6()"> I eat du canard for mon dejeuner. </p>
+<script>
+
+function myFunction5 (){
+	var plate = document.getElementById("dinner").innerHTML;
+	var yum = plate.replace("du canard", "duck");
+	document.getElementById("dinner").innerHTML = yum;
+
+	var yum2 = yum.replace("mon dejeuner", "lunch");
+	document.getElementById("dinner").innerHTML= yum2;
+	}
+
+function myFunction6() {
+	document.getElementById("dinner").innerHTML="I eat du canard for mon dejeuner."; }
+
+
+</script>
+<p> okay I think i figured out a way around it, although the code is a little clunky. See the section about the horse who likes apples! </p>
+<hr>
+
+
+
+<h1> <b> Translation Test 1<br> What is html again? </b> </h1>
+    		<p> word <br> poem <br> text <br>
+		<a href="https://clas.uiowa.edu/dwllc/french-italian/people/andrea-lakiotis"> Andrea's biography </a> <br>
+		Andrea is a student in the <a href=#C1> MFA Literary Translation program at UIowa.</a> </p>
+		<p><img src="https://clas.uiowa.edu/dwllc/sites/clas.uiowa.edu.dwllc/files/styles/profile/public/field/image/Lakiotis.PNG?itok=LKPwFvoW" alt= "Andrea" style="float:left;width:200px;height150px;"> This is a picture of her in France. </p>
+ 		<br><br>
+		<a href="https://www.lib.uiowa.edu/studio/" target="_blank"> <img src="http://dailyiowan.lib.uiowa.edu/images/logo.png" alt="University of Iowa logo"> </a> <hr>
+
+		<p style="text-align:center;"> Let's test a few more things <br> </p>
+		<div class="frenchwords"><p id="p01" title="mouse"> souris </p> <p title="cat"> chat </p> <p class="bigword" title="dog"> chien </p></div>
+
+		<p style="font-size;115;"> Andrea thinks translation is fun. In fact, she once said,
+			<blockquote> Translation is like planting a tree. If you don't understand that metaphor, then you don't understand translation. </blockquote>
+		<hr>
+		<p> This is a poem I made up to test some more html things:
+			<blockquote> Les <abbr title="cats"> chats </abbr> <abbr title="are"> sont </abbr> <abbr title="blue, notice how the adjective agrees in number and gender in French"> bleus. </abbr> </blockquote>
+		<!-- Abbr could be a promising lead if it didn't have a few problems. . . SOMEHOW THE UNDERLINING WENT AWAY? WHEN AND WHY? It seems to be dependant on the browser used-->
+
+		<hr>
+		<h4 id="C1"> Chapter 1 </h4>
+		<p> Once upon a time there was a little translation program in the middle of Iowa. . .</p>
+		<hr>
+		<p> Google translate is also something we will be exploring on this site, and its implications for translation. <br> <br>
+		<img src="https://media.giphy.com/media/iUFgLi6nkFmFy/giphy.gif" alt="Google translate fail GIF" style="width:480px;height:200px;border:10;"></p> <hr>
+		<h3> Table of Contents </h3>
+		<ul type="square">
+			<li> Idea One </li>
+			<li> Idea Two </li>
+			<li> Idea Three </li>
+		</ul>
+<hr> <hr> <hr>
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p>Experiment by the Mad Translator</p>
+  <p>I'm so cool <a href="https://en.wikipedia.org/wiki/Penguin">
+  so chill like a penguin</a>.</p></footer><br> <br> <br>
+
+</body>
+
+
+
+
+</html>
