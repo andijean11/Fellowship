@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<!--
+The first script below, pulls in jquery, which then allows us to get the HTML from your header.html file, and then "prepend", or add it above the header in this file
+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$.get( "header.html", function( data ) {
+  $('body').prepend(data)
+});
+</script>
+<div class="w3-content"> </div>
+
+
+<body>
+
+<!--Introduction box -->
+<div class="w3-col 14">
+<div class="w3-card-2 w3-margin w3-margin-top">
+<img src="pic1.jpg" style="width:25%">
+<div class="w3-container w3-white">
+<h3> <b> The Mad Translator </b> </h4>
+<p> This is a really old picture of me when I was trying to be cool. <br> I don't try to be cool anymore, because I know that I am cool.<br>
+Look at these cool digital features I've integrated with translation. </p>
+</div> </div> <hr> </div>
+
+
+
+
+
+
+<hr> <hr> <hr>
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <p>Experiment by the Mad Translator</p>
+  <p>I'm so cool <a href="https://en.wikipedia.org/wiki/Penguin">
+  so chill like a penguin</a>.</p></footer><br> <br> <br>
+
+</body>
+
+
+
+
+</html>

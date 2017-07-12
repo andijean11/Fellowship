@@ -1,0 +1,161 @@
+body {
+  font-family: 'Garamond', serif;
+  font-weight: normal;
+  color: black;
+}
+
+header{
+    padding: 0px 0px 0px;
+    width: 100%;
+    }
+
+
+  header .row,
+  footer .row {
+   display: flex;
+    height: 100px;
+    max-width: 2500px;
+	align-items: center;
+    background-color: #D3C6DF;
+  }
+
+  header h1 {
+    font-weight: bold;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+header nav{
+  display: flex;
+  justify-content: flex-end;
+  font-size: relative;
+
+}
+
+header a {
+    padding: 10px 35px;
+    margin: 0;
+    display: inline-flex;
+    color: white;
+          }
+
+
+header a:hover {
+  color:black;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px;
+}
+
+header a:active{
+  color:purple;
+  text-decoration:none;
+}
+
+  .jumbotron {
+    display: block;
+    align-items: center;
+    background-image: url('images/magic1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    height: 500px;
+    text-shadow: 0.5px 0.5px 0.5px #000000;
+  }
+
+  .jumbotron h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: black;
+  }
+
+  .jumbotron h3 {
+    margin: 0 0 20px;
+    color: #2E7299;
+  }
+
+  section .row img{
+    margin: 0 0 30px;
+    width:100%;
+  }
+
+  .col-md-6 {
+    margin: 10px 0 50px;
+    height: 100px;
+    width: 200px;
+      }
+
+.col-md-6 .image {
+    position: relative;
+  }
+
+h2 {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 100%;
+    font-size: relative;
+  }
+
+  .image {
+    max-height:960px;
+    max-width: 570px;
+  }
+
+  .fade {
+   opacity: 1.1;
+   transition: opacity 0s ;
+   -moz-transition: opacity 0s ease-in-out;
+   -webkit-transition: opacity 0s ease-in-out;
+   }
+
+   .fade:hover {
+      opacity: 0.72;
+      }
+
+
+  img.resize {
+        max-width:200px;
+        max-height:200px;
+      }
+
+
+body a:hover {
+    color:black;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px;
+  }
+
+body a:active{
+    color:purple
+    text-decoration:none;
+  }
+
+
+  .btn.btn-primary:hover{
+    color:#ffffff;
+    background-color: purple;
+  }
+
+  ul {
+    list-style: none;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+
+
+
+  /*footer .col-sm-8 {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer ul {
+    list-style: none;*
+  }
+
+/*  footer li img{
+    width: 32px;
+    height:32px;
+  }*/
